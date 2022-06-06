@@ -36,30 +36,11 @@
                     <img src="{{url_for('static', filename='Img/Logo.png')}}" width="100px" alt="">
                 </div>
 
-                <h2 class="fw-bold text-center py-5">Registrate</h2>
-
-                <form action="#">
-                    <div class="mb-4">
-                        <label for="text" class="form-label">Nombre</label>
-                        <input type="text" class="form-control" name="nombre">
-                    </div>
-                    <div class="mb-4">
-                        <label for="email" class="form-label">Correo electronico</label>
-                        <input type="email" class="form-control" name="email">
-                    </div>
-                    <div class="mb-4">
-                        <label for="Password" class="form-label">Password</label>
-                        <input type="Password" class="form-control" name="Password">
-                    </div>
-
-                    <div class="d-grid">
-                        <button type="submit" class="btn btn-primary">Registrarse</button>
-                    </div>
-                </form>
+                <h2 class="fw-bold text-center py-2">Registrate</h2>
 
                 <div class="container w-100 my-5">
-                    <div class="row text-center">
-                        <div class="col-12">Registrate tambien con</div>
+                    <div class="row text-center py-4">
+                        <div class="col-12">Registrate con tu cuentas</div>
                     </div>
                     <div class="row">
                         <div class="col">
@@ -90,6 +71,28 @@
                         </div>
                     </div>
                 </div>
+                <form action="#">
+                    <div class="mb-4">
+                        <label for="text" class="form-label">Nombre</label>
+                        <input type="text" class="form-control" name="nombre">
+                    </div>
+                    <div class="mb-4">
+                        <label for="text" class="form-label">Apellido</label>
+                        <input type="text" class="form-control" name="Apellido">
+                    </div>
+                    <div class="mb-4">
+                        <label for="email" class="form-label">Correo electronico</label>
+                        <input type="email" class="form-control" name="email">
+                    </div>
+                    <div class="mb-4">
+                        <label for="Password" class="form-label">Contraseña</label>
+                        <input type="Password" class="form-control" name="Password">
+                    </div>
+
+                    <div class="d-grid">
+                        <button type="submit" class="btn btn-primary">Registrarse</button>
+                    </div>
+                </form>
             </div>
 
         </div>
