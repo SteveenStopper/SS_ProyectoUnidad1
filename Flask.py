@@ -20,9 +20,21 @@ def recuperarCo():
 def principal():
     return render_template('Principal.html')
 
+@app.route('/Ortodoncia')
+def ortodoncia():
+    return render_template('Ortodoncia.html')
+
+@app.route('/Odontopediatria')
+def odonto():
+    return render_template('Odontopediatria.html')
+
 @app.route('/Contacto')
 def contactos():
     return render_template('Contactos.html')
+
+@app.route('/Sobre_Nosotros')
+def about():
+    return render_template('About.html')
 
 # Para ejecutar la aplicacion
 if __name__ == '__main__':
