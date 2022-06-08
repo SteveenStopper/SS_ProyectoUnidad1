@@ -1,85 +1,191 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contactos</title>
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contactos</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
 
 </head>
+
 <body>
   <header class="p-3 bg-dark text-white">
     <div class="container">
-        <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
-            <a href="/Inicio" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
-                <img src="{{url_for('static', filename='Img/Logo.png')}}" width="90px" height="70px" alt="">
-                <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap">
-                    <use xlink:href="#bootstrap" />
-                </svg>
-            </a>
-
-            <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-                <li><a href="/Inicio" class="nav-link px-2 text-secondary">Inicio</a></li>
-                <li><a href="#" class="nav-link px-2 text-white">Agendar Cita</a></li>
-                <li class="nav-item dropdown text-white">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                        data-bs-toggle="dropdown" aria-expanded="false">
-                        Servicios
-                    </a>
-                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" href="/Ortodoncia">Ortodoncia</a></li>
-                        <li><a class="dropdown-item" href="/Odontopediatria">Odontopediatria</a></li>
-                        <li>
-                            <hr class="dropdown-divider">
-                        </li>
-                        <li><a class="dropdown-item" href="/Contacto">Mas informacion aqui</a></li>
-                    </ul>
-                </li>
-                <li><a href="/Sobre_Nosotros" class="nav-link px-2 text-white">Sobre Nosotros</a></li>
-                <li><a href="/Contacto" class="nav-link px-2 text-white">Contactos</a></li>
-            </ul>
-
-            <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">
-                <input type="search" class="form-control form-control-dark text-white bg-dark"
-                    placeholder="Search..." aria-label="Search">
-            </form>
-
-            <div class="text-end">
-                <button type="button" class="btn btn-outline-light me-2">Login</button>
-                <button type="button" class="btn btn-warning">Sign-up</button>
-            </div>
-        </div>
-    </div>
-</header>
-
-
-
-
-
-    <!--Footers o Pie de pagina-->
-    <div class="container">
-      <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
-        <p class="col-md-4 mb-0 text-muted">&copy; 2022 Alex Company, Inc</p>
-    
-        <a href="/Inicio" class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
-          <img src="{{url_for('static', filename='Img/Logo.png')}}" width="70px" alt="">
-          <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"/></svg>
+      <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+        <a href="/Inicio" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
+          <img src="{{url_for('static', filename='Img/Logo.png')}}" width="90px" height="70px" alt="">
+          <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap">
+            <use xlink:href="#bootstrap" />
+          </svg>
         </a>
-    
-        <ul class="nav col-md-4 justify-content-end">
-          <li class="nav-item"><a href="/Inicio" class="nav-link px-2 text-muted">Inicio</a></li>
-          <li class="nav-item"><a href="/Agendar_Cita" class="nav-link px-2 text-muted">Agendar Cita</a></li>
-          <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Servicios</a></li>
-          <li class="nav-item"><a href="/Sobre_Nosotros" class="nav-link px-2 text-muted">Sobre Nosotros</a></li>
-          <li class="nav-item"><a href="/Contacto" class="nav-link px-2 text-muted">Contactos</a></li>
+
+        <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+          <li><a href="/Inicio" class="nav-link px-2 text-secondary">Inicio</a></li>
+          <li><a href="/Agendar_Cita" class="nav-link px-2 text-white">Agendar Cita</a></li>
+          <li class="nav-item dropdown text-white">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              Servicios
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="/Ortodoncia">Ortodoncia</a></li>
+              <li><a class="dropdown-item" href="/Odontopediatria">Odontopediatria</a></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item" href="/Contacto">Mas informacion aqui</a></li>
+            </ul>
+          </li>
+          <li><a href="/Sobre_Nosotros" class="nav-link px-2 text-white">Sobre Nosotros</a></li>
+          <li><a href="/Contacto" class="nav-link px-2 text-white">Contactos</a></li>
         </ul>
-      </footer>
+
+        <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">
+          <input type="search" class="form-control form-control-dark text-white bg-dark" placeholder="Search..."
+            aria-label="Search">
+        </form>
+
+        <div class="text-end">
+          <button type="button" class="btn btn-outline-light me-2">Login</button>
+          <button type="button" class="btn btn-warning">Sign-up</button>
+        </div>
+      </div>
     </div>
+  </header>
+
+  <!--Formulario-->
+  <div class="site-section site-block-appointment">
+    <div class="container">
+      <div class="row">
+
+        <div class="col-lg-6 mb-5 pl-lg-5 order-1 order-lg-2 p-md-5">
+          <div class="pl-lg-5 ml-lg-5">
+            <h2 id="contactanos" class="site-heading text-black">Agenda tu <strong>Cita</strong> </h2>
+
+            <p class="lead text-black">Ortodoncia & Estetica Dental <br>¡Sonreír es siempre tu mejor look! </p>
+            <p align="justify" class="text-black-opacity-5"> <br> Te esperamos con la mejor atención y los mejores
+              profesionales. <br>Ofreciendo al paciente confort y confianza, garantizando el éxito de los tratamientos
+              realizados y satisfacción con los resultados logrados.
+            </p>
+            <img src="{{url_for('static', filename='Img/Atencion.jpg')}}" class="d-block w-100" alt="..."
+                        width="250px" height="350px">
+          </div>
+
+        </div>
+
+        <div class="col-lg-6 order-2 order-lg-1 p-5">
+
+          <form action="#" method="POST" class="p-5 bg-white">
+
+            <div class="row form-group">
+              <div class="col-md-6 mb-3 mb-md-0">
+                <label class="font-weight-bold" for="fname">Nombre</label><br><br>
+                <input type="text" id="fname" class="form-control" placeholder="Nombre"><br>
+              </div>
+              <div class="col-md-6">
+                <label class="font-weight-bold" for="lname">Apellido</label><br><br>
+                <input type="text" id="lname" class="form-control" placeholder="Apellido"><br>
+              </div>
+            </div>
+            <div class="row form-group">
+              <div class="col-md-6 mb-3 mb-md-0">
+                <label class="font-weight-bold" for="date">Día</label><br><br>
+                <input type="text" id="date" class="form-control datepicker px-2" placeholder="Día de la visita"><br>
+              </div>
+              <div class="col-md-6">
+                <label class="font-weight-bold" for="email">Email</label><br><br>
+                <input type="email" id="email" class="form-control" placeholder="Email"><br>
+              </div>
+            </div>
+            <div class="row form-group">
+              <div class="col-md-12">
+                <label class="font-weight-bold" for="treatment">Tratamientos</label><br><br>
+                <select name="treatment" id="treatment" class="form-control">
+                  <option value="">Odontología general y preventiva</option>
+                  <option value="">Odontología Estética y Rehabilitación Oral</option>
+                  <option value=""> Prótesis Dental</option>
+                  <option value=""> Implantes</option>
+                  <option value=""> Cirugía</option>
+                  <option value=""> Ortodoncia y Ortopedia Funcional de los Maxilares</option>
+                  <option value=""> Endodoncia</option>
+                  <option value=""> Odontopediatria</option>
+                </select><br>
+              </div>
+            </div>
+            <div class="row form-group">
+              <div class="col-md-12">Mensaje</label><br><br>
+                <textarea name="note" id="note" cols="30" rows="5" class="form-control"
+                  placeholder="Escribe algún mensaje o pregunta..."></textarea>
+              </div>
+            </div>
+            <div class="row form-group">
+              <div class="col-md-12">
+                <input type="submit" value="Enviar" class="btn" style="background: #4f2c6b; color: white;">
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+<!--Posible cambio mapa-->
+  <div class="site-section site-block-3">
+    <div class="container">
+      <div class="row mb-5 justify-content-center">
+        <div class="col-md-6 text-center">
+          <h2 class="site-heading text-black">Visítanos: </strong></h2>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6 mb-5 mb-lg-0">
+            <h2 style="font-size:22px;">Santo Domingo</strong></h2>
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3989.794610939225!2d-78.43252865681006!3d-0.19752478738534945!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xbe836d02f119f952!2sDents.+Ortodoncia+%26+Est%C3%A9tica+Dental!5e0!3m2!1ses-419!2sec!4v1560832665335!5m2!1ses-419!2sec"
+              width="100%" height="350" frameborder="0" style="border:0" allowfullscreen></iframe>
+          </div>
+          <div class="col-lg-6">
+            <div class="row row-items">
+              <h2 style="font-size:22px;">Concordia</strong></h2>
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d997.4492406210944!2d-78.4811988!3d-0.1874736!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91d59b0e3cb19b39%3A0x3491b18f85b5f5fb!2sDents.%20Ortodoncia%20%26%20Est%C3%A9tica%20Dental!5e0!3m2!1ses!2sus!4v1619996714806!5m2!1ses!2sus"
+                width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--Footers o Pie de pagina-->
+  <div class="container">
+    <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+      <p class="col-md-4 mb-0 text-muted">&copy; 2022 Alex Company, Inc</p>
+
+      <a href="/Inicio"
+        class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
+        <img src="{{url_for('static', filename='Img/Logo.png')}}" width="70px" alt="">
+        <svg class="bi me-2" width="40" height="32">
+          <use xlink:href="#bootstrap" />
+        </svg>
+      </a>
+
+      <ul class="nav col-md-4 justify-content-end">
+        <li class="nav-item"><a href="/Inicio" class="nav-link px-2 text-muted">Inicio</a></li>
+        <li class="nav-item"><a href="/Agendar_Cita" class="nav-link px-2 text-muted">Agendar Cita</a></li>
+        <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Servicios</a></li>
+        <li class="nav-item"><a href="/Sobre_Nosotros" class="nav-link px-2 text-muted">Sobre Nosotros</a></li>
+        <li class="nav-item"><a href="/Contacto" class="nav-link px-2 text-muted">Contactos</a></li>
+      </ul>
+    </footer>
+  </div>
 </body>
+
 </html>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
-    crossorigin="anonymous"></script>
+  integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
