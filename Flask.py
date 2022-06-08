@@ -20,6 +20,10 @@ def recuperarCo():
 def principal():
     return render_template('Principal.html')
 
+@app.route('/Agendar_Cita')
+def agCita():
+    return render_template('AgCitas.html')
+
 @app.route('/Ortodoncia')
 def ortodoncia():
     return render_template('Ortodoncia.html')
