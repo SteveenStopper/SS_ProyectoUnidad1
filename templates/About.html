@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,6 +9,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
 </head>
+
 <body>
     <header class="p-3 bg-dark text-white">
         <div class="container">
@@ -53,28 +55,66 @@
         </div>
     </header>
 
-
-
-        <!--Footers o Pie de pagina-->
+    <!--Formulario-->
+    <div class="site-section site-block-appointment">
         <div class="container">
-            <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
-              <p class="col-md-4 mb-0 text-muted">&copy; 2022 Alex Company, Inc</p>
-          
-              <a href="/Inicio" class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
+            <div class="row">
+
+                <div class="col-lg-6 mb-5 pl-lg-5 order-1 order-lg-2 p-md-5">
+                    <div class="pl-lg-5 ml-lg-5">
+
+                        <img src="https://gacetadental.com/wp-content/uploads/2021/10/habilidades-de-un-dentista.jpg"
+                            class="card-img-top" alt="..." />
+                    </div>
+
+                </div>
+
+                <div class="col-lg-6 order-2 order-lg-1 py-5">
+
+                    <h2 style="text-align: center;">¿Quienes Somos?</h2><br>
+                    <div style="text-align: center;">
+                        <p>“Somos un grupo de profesionales que unieron su conocimiento y</p>
+                        <p>experiencia para brindar un servicio de calidad que satisfaga las</p>
+                        <p>necesidades de cada paciente . Nuestra meta es llegar a ser la primera</p>
+                        <p>opción de tratamiento dental para la familia</p><br>
+                        <p>La clínica utiliza todos los protocolos de esterilización, desinfección y</p>
+                        <p>manejo de desechos biocontagiosos requeridos por el Ministerio de Salud</p>
+                        <p>garantizándole a los pacientes el uso de instrumental estéril y un área de</p>
+                        <p>trabajo adecuadamente desinfectada.”</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <p style="background:rgb(127, 187, 207); color:white; font-weight:bold; padding:15px; border:3px solid white; 
+            margin-top:40px; margin-bottom:40px; text-align:center; font-size:22px; border-radius:10px;">
+        Nuestra pasión es brindar un servicio de alta calidad caracterizado por el trato individualizado, comodidad y 
+        satisfacción del paciente. Somos DC Dental. “Salud detrás de su sonrisa “</p>
+
+    <!--Footers o Pie de pagina-->
+    <div class="container">
+        <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+            <p class="col-md-4 mb-0 text-muted">&copy; 2022 Alex Company, Inc</p>
+
+            <a href="/Inicio"
+                class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
                 <img src="{{url_for('static', filename='Img/Logo.png')}}" width="70px" alt="">
-                <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"/></svg>
-              </a>
-          
-              <ul class="nav col-md-4 justify-content-end">
+                <svg class="bi me-2" width="40" height="32">
+                    <use xlink:href="#bootstrap" />
+                </svg>
+            </a>
+
+            <ul class="nav col-md-4 justify-content-end">
                 <li class="nav-item"><a href="/Inicio" class="nav-link px-2 text-muted">Inicio</a></li>
                 <li class="nav-item"><a href="/Agendar_Cita" class="nav-link px-2 text-muted">Agendar Cita</a></li>
                 <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Servicios</a></li>
                 <li class="nav-item"><a href="/Sobre_Nosotros" class="nav-link px-2 text-muted">Sobre Nosotros</a></li>
                 <li class="nav-item"><a href="/Contacto" class="nav-link px-2 text-muted">Contactos</a></li>
-              </ul>
-            </footer>
-          </div>
+            </ul>
+        </footer>
+    </div>
 </body>
+
 </html>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
