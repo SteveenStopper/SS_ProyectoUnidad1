@@ -12,6 +12,10 @@ def login():
 def registro():
     return render_template('Registro.html')
 
+@app.route('/Recuperar_Contraseña')
+def recuperarCo():
+    return render_template('RecuperarC.html')
+
 @app.route('/Inicio')
 def principal():
     return render_template('Principal.html')
