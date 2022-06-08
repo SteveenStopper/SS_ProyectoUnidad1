@@ -3,6 +3,9 @@ from flask import Flask, render_template
 # Inicializar la aplicacion
 app = Flask(__name__, template_folder='templates')
 
+#Array
+loginUser=[]
+
 # Ruta principal para el login
 @app.route('/')
 def login():
@@ -39,6 +42,7 @@ def contactos():
 @app.route('/Sobre_Nosotros')
 def about():
     return render_template('About.html')
+
 
 # Para ejecutar la aplicacion
 if __name__ == '__main__':
