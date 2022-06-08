@@ -12,6 +12,14 @@ def login():
 def registro():
     return render_template('Registro.html')
 
+@app.route('/Inicio')
+def principal():
+    return render_template('Principal.html')
+
+@app.route('/Contacto')
+def contactos():
+    return render_template('Contactos.html')
+
 # Para ejecutar la aplicacion
 if __name__ == '__main__':
     app.run(debug=True)
