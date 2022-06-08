@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,25 +8,57 @@
     <title>Recuperar contraseña</title>
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
 
     <style>
         body {
             background: #ffe259;
             background: linear-gradient(to right, #ffa751, #ffe259);
         }
-
-        .bg {
-            background-image: url(../static/Img/Naturaleza.jpg);
-            background-position: center center;
-            background-size: cover;
-        }
     </style>
 
 </head>
+
 <body>
-    
+    <section class="d-flex justify-content-center py-xxl-5">
+        <div class="card col-sm-6 p-3 py-xxl-5">
+            <div class="mb-3">
+                <h4 style="padding: 2%;">Recuperar Contraseña</h4>
+                <p>Para poder recuperar tu contraseña debes hacer lo siguiente:</p>
+                <p>Introduce tu correo electrónico o número de móvil para buscar tu cuenta.</p>
+            </div>
+            <div class="mb-2">
+                <form action="">
+                    <div class="mb-2">
+                        <label for="Correo">Correo</label>
+                        <br><br><input type="email" class="form-control" name="Correo" id="Correo"
+                            placeholder="ej: Juanito@gmail.com">
+                    </div>
+                </form>
+                    <div class="row">
+                        <div class="col">
+                            <button class="btn btn-outline-primary w-50 my-5" style="margin: 10%;">
+                                <div class="row align-items-center">
+                                    <div class="col-12 col-md-10 text-center">
+                                        Enviar
+                                    </div>
+                                </div>
+                            </button>
+                        </div>
+                        <div class="col">
+                            <button class="btn btn-outline-danger w-50 my-5" style="margin: 35%;">
+                                <div class="row align-items-center">
+                                    <div class="col-12 col-md-10 text-center">
+                                        Cancelar
+                                    </div>
+                                </div>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+    </section>
 </body>
+
 </html>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
