@@ -48,13 +48,87 @@
                 </form>
 
                 <div class="text-end">
-                    <button type="button" class="btn btn-outline-light me-2">Login</button>
-                    <button type="button" class="btn btn-warning">Sign-up</button>
-                </div>
+                  <a href="/"><button type="button" class="btn btn-outline-light me-2">Login</button></a>
+                  <a href="/Registrarse"><button type="button" class="btn btn-warning">Registrate</button></a>
+              </div>
             </div>
         </div>
     </header>
+<!--Formulario-->
+<div class="site-section site-block-appointment">
+    <div class="container">
+      <div class="row">
 
+        <div class="col-lg-6 order-2 order-lg-1 p-5">
+          <div class="pl-lg-5 ml-lg-5">
+            <h2 id="contactanos" class="site-heading text-black">Agenda tu <strong>Cita</strong> </h2>
+
+            <p class="lead text-black">Ortodoncia & Estetica Dental <br>¡Sonreír es siempre tu mejor look! </p>
+            <p align="justify" class="text-black-opacity-5"> <br> Te esperamos con la mejor atención y los mejores
+              profesionales. <br>Ofreciendo al paciente confort y confianza, garantizando el éxito de los tratamientos
+              realizados y satisfacción con los resultados logrados.
+            </p>
+            <img src="{{url_for('static', filename='Img/Atencion.jpg')}}" class="d-block w-100" alt="..."
+                        width="250px" height="350px">
+          </div>
+
+        </div>
+
+        <div class="col-lg-6 mb-5 pl-lg-5 order-1 order-lg-2 p-md-5">
+
+          <form action="#" method="POST" class="p-5 bg-white">
+
+            <div class="row form-group">
+              <div class="col-md-6 mb-3 mb-md-0">
+                <label class="font-weight-bold" for="fname">Nombre</label><br><br>
+                <input type="text" id="fname" class="form-control" placeholder="Nombre"><br>
+              </div>
+              <div class="col-md-6">
+                <label class="font-weight-bold" for="lname">Apellido</label><br><br>
+                <input type="text" id="lname" class="form-control" placeholder="Apellido"><br>
+              </div>
+            </div>
+            <div class="row form-group">
+              <div class="col-md-6 mb-3 mb-md-0">
+                <label class="font-weight-bold" for="date">Día</label><br><br>
+                <input type="text" id="date" class="form-control datepicker px-2" placeholder="Día de la visita"><br>
+              </div>
+              <div class="col-md-6">
+                <label class="font-weight-bold" for="email">Email</label><br><br>
+                <input type="email" id="email" class="form-control" placeholder="Email"><br>
+              </div>
+            </div>
+            <div class="row form-group">
+              <div class="col-md-12">
+                <label class="font-weight-bold" for="treatment">Tratamientos</label><br><br>
+                <select name="treatment" id="treatment" class="form-control">
+                  <option value="">Odontología general y preventiva</option>
+                  <option value="">Odontología Estética y Rehabilitación Oral</option>
+                  <option value=""> Prótesis Dental</option>
+                  <option value=""> Implantes</option>
+                  <option value=""> Cirugía</option>
+                  <option value=""> Ortodoncia y Ortopedia Funcional de los Maxilares</option>
+                  <option value=""> Endodoncia</option>
+                  <option value=""> Odontopediatria</option>
+                </select><br>
+              </div>
+            </div>
+            <div class="row form-group">
+              <div class="col-md-12">Mensaje</label><br><br>
+                <textarea name="note" id="note" cols="30" rows="5" class="form-control"
+                  placeholder="Escribe algún mensaje o pregunta..."></textarea>
+              </div>
+            </div>
+            <div class="row form-group">
+              <div class="col-md-12"><br>
+                <input type="submit" value="Enviar" class="btn" style="background: #4f2c6b; color: white;">
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
 
 
         <!--Footers o Pie de pagina-->
