@@ -1,61 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Agendar Citas</title>
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Agendar Citas</title>
+  <!--Libreria de CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
 
 </head>
+
 <body>
-    <header class="p-3 bg-dark text-white">
-        <div class="container">
-            <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
-                <a href="/Inicio" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
-                    <img src="{{url_for('static', filename='Img/Logo.png')}}" width="90px" height="70px" alt="">
-                    <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap">
-                        <use xlink:href="#bootstrap" />
-                    </svg>
-                </a>
+  <!--En esta seccion del codigo tendremos un container el cual va ser usado para nuestro header
+        donde tendremos una imagen de logo y nuestras opciones para poder navegar en 
+        nuestra pagina web.-->
+  <header class="p-3 bg-dark text-white">
+    <div class="container">
+      <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+        <a href="/Inicio" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
+          <img src="{{url_for('static', filename='Img/Logo.png')}}" width="90px" height="70px" alt="">
+          <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap">
+            <use xlink:href="#bootstrap" />
+          </svg>
+        </a>
 
-                <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-                    <li><a href="/Inicio" class="nav-link px-2 text-secondary">Inicio</a></li>
-                    <li><a href="#" class="nav-link px-2 text-white">Agendar Cita</a></li>
-                    <li class="nav-item dropdown text-white">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                            data-bs-toggle="dropdown" aria-expanded="false">
-                            Servicios
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="/Ortodoncia">Ortodoncia</a></li>
-                            <li><a class="dropdown-item" href="/Odontopediatria">Odontopediatria</a></li>
-                            <li>
-                                <hr class="dropdown-divider">
-                            </li>
-                            <li><a class="dropdown-item" href="/Contacto">Mas informacion aqui</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="/Sobre_Nosotros" class="nav-link px-2 text-white">Sobre Nosotros</a></li>
-                    <li><a href="/Contacto" class="nav-link px-2 text-white">Contactos</a></li>
-                </ul>
+        <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+          <li><a href="/Inicio" class="nav-link px-2 text-secondary">Inicio</a></li>
+          <li><a href="#" class="nav-link px-2 text-white">Agendar Cita</a></li>
+          <li class="nav-item dropdown text-white">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              Servicios
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="/Ortodoncia">Ortodoncia</a></li>
+              <li><a class="dropdown-item" href="/Odontopediatria">Odontopediatria</a></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item" href="/Contacto">Mas informacion aqui</a></li>
+            </ul>
+          </li>
+          <li><a href="/Sobre_Nosotros" class="nav-link px-2 text-white">Sobre Nosotros</a></li>
+          <li><a href="/Contacto" class="nav-link px-2 text-white">Contactos</a></li>
+        </ul>
 
-                <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">
-                    <input type="search" class="form-control form-control-dark text-white bg-dark"
-                        placeholder="Search..." aria-label="Search">
-                </form>
+        <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">
+          <input type="search" class="form-control form-control-dark text-white bg-dark" placeholder="Search..."
+            aria-label="Search">
+        </form>
 
-                <div class="text-end">
-                  <a href="/"><button type="button" class="btn btn-outline-light me-2">Login</button></a>
-                  <a href="/Registro"><button type="button" class="btn btn-warning">Registrate</button></a>
-              </div>
-            </div>
+        <div class="text-end">
+          <a href="/"><button type="button" class="btn btn-outline-light me-2">Login</button></a>
+          <a href="/Registro"><button type="button" class="btn btn-warning">Registrate</button></a>
         </div>
-    </header>
-<!--Formulario-->
-<div class="site-section site-block-appointment">
+      </div>
+    </div>
+  </header>
+
+  <!--Formulario el cual estara dividido por el container la cual en una seccion tenemos
+    el formulario y por otra parte una imagen. En esta seccion tendremos una lista
+    en la misma pagina donde el usuario llenara el formulario y esta sera registrada
+    en la lista.-->
+  <div class="site-section site-block-appointment">
     <div class="container">
       <div class="row">
 
@@ -68,55 +77,52 @@
               profesionales. <br>Ofreciendo al paciente confort y confianza, garantizando el éxito de los tratamientos
               realizados y satisfacción con los resultados logrados.
             </p>
-            <img src="{{url_for('static', filename='Img/Atencion.jpg')}}" class="d-block w-100" alt="..."
-                        width="250px" height="350px">
+            <img src="{{url_for('static', filename='Img/Atencion.jpg')}}" class="d-block w-100" alt="..." width="250px"
+              height="350px">
           </div>
 
         </div>
 
         <div class="col-lg-6 mb-5 pl-lg-5 order-1 order-lg-2 p-md-5">
 
-          <form action="#" method="POST" class="p-5 bg-white">
+          <form action="/Agendar_Cita" method="POST" class="p-5 bg-white">
 
             <div class="row form-group">
               <div class="col-md-6 mb-3 mb-md-0">
                 <label class="font-weight-bold" for="fname">Nombre</label><br><br>
-                <input type="text" id="fname" class="form-control" placeholder="Nombre"><br>
+                <input type="text" id="pnombre" name="pnombre" class="form-control" placeholder="Nombre"><br>
               </div>
               <div class="col-md-6">
                 <label class="font-weight-bold" for="lname">Apellido</label><br><br>
-                <input type="text" id="lname" class="form-control" placeholder="Apellido"><br>
+                <input type="text" id="papellido" name="papellido" class="form-control" placeholder="Apellido"><br>
               </div>
             </div>
             <div class="row form-group">
               <div class="col-md-6 mb-3 mb-md-0">
                 <label class="font-weight-bold" for="date">Día</label><br><br>
-                <input type="text" id="date" class="form-control datepicker px-2" placeholder="Día de la visita"><br>
+                <input type="date" id="date" name="date" class="form-control datepicker px-2"
+                  placeholder="Día de la visita"><br>
               </div>
               <div class="col-md-6">
                 <label class="font-weight-bold" for="email">Email</label><br><br>
-                <input type="email" id="email" class="form-control" placeholder="Email"><br>
+                <input type="email" id="email" name="email" class="form-control" placeholder="Email"><br>
               </div>
             </div>
             <div class="row form-group">
               <div class="col-md-12">
                 <label class="font-weight-bold" for="treatment">Tratamientos</label><br><br>
-                <select name="treatment" id="treatment" class="form-control">
-                  <option value="">Odontología general y preventiva</option>
-                  <option value="">Odontología Estética y Rehabilitación Oral</option>
-                  <option value=""> Prótesis Dental</option>
-                  <option value=""> Implantes</option>
-                  <option value=""> Cirugía</option>
-                  <option value=""> Ortodoncia y Ortopedia Funcional de los Maxilares</option>
-                  <option value=""> Endodoncia</option>
-                  <option value=""> Odontopediatria</option>
+                <select id="treatment" name="treatment" class="form-control">
+                  <option value="Odontología general y preventiva">Odontología general y preventiva</option>
+                  <option value="Odontología Estética y Rehabilitación Oral">Odontología Estética y Rehabilitación Oral
+                  </option>
+                  <option value="Prótesis Dental">Prótesis Dental</option>
+                  <option value="Implantes">Implantes</option>
+                  <option value="Cirugía">Cirugía</option>
+                  <option value="Ortodoncia y Ortopedia Funcional de los Maxilares">Ortodoncia y Ortopedia Funcional de
+                    los Maxilares</option>
+                  <option value="Endodoncia">Endodoncia</option>
+                  <option value="Odontopediatria">Odontopediatria</option>
                 </select><br>
-              </div>
-            </div>
-            <div class="row form-group">
-              <div class="col-md-12">Mensaje</label><br><br>
-                <textarea name="note" id="note" cols="30" rows="5" class="form-control"
-                  placeholder="Escribe algún mensaje o pregunta..."></textarea>
               </div>
             </div>
             <div class="row form-group">
@@ -130,28 +136,66 @@
     </div>
   </div>
 
+  <!--Tabla de datos aqui se llenaran los campos con el formulario
+      esto con la ayuda de Jinja para pasar los datos del array a la lista.-->
+  <div class="container" style="padding: 2%;">
+    <table class="table" style="text-align: center;">
+      <thead>
+        <tr style="background-color: #4f2c6b; color: white;">
+          <th scope="col">#</th>
+          <th scope="col">Nombre</th>
+          <th scope="col">Apellido</th>
+          <th scope="col">Dia</th>
+          <th scope="col">Email</th>
+          <th scope="col">Tratamientos</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for Ag_Citas in Og_Citas %}
+        <tr>
+          <th>{{Ag_Citas.id_pac}}</th>
+          <td>{{Ag_Citas.pnombre}}</td>
+          <td>{{Ag_Citas.papellido}}</td>
+          <td>{{Ag_Citas.date}}</td>
+          <td>{{Ag_Citas.email}}</td>
+          <td>{{Ag_Citas.treatment}}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+    <form action="/borrar" method="post">
+      <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+        <!-- Botón que borrará todas las tareas pendientes de nuestra tabla -->
+        <button class="btn" type="submit" style="background: #4f2c6b; color: white;">Borrar</button>
+      </div>
+    </form>
+  </div>
 
-        <!--Footers o Pie de pagina-->
-        <div class="container">
-            <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
-              <p class="col-md-4 mb-0 text-muted">&copy; 2022 Alex Company, Inc</p>
-          
-              <a href="/Inicio" class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
-                <img src="{{url_for('static', filename='Img/Logo.png')}}" width="70px" alt="">
-                <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"/></svg>
-              </a>
-          
-              <ul class="nav col-md-4 justify-content-end">
-                <li class="nav-item"><a href="/Inicio" class="nav-link px-2 text-muted">Inicio</a></li>
-                <li class="nav-item"><a href="/Agendar_Cita" class="nav-link px-2 text-muted">Agendar Cita</a></li>
-                <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Servicios</a></li>
-                <li class="nav-item"><a href="/Sobre_Nosotros" class="nav-link px-2 text-muted">Sobre Nosotros</a></li>
-                <li class="nav-item"><a href="/Contacto" class="nav-link px-2 text-muted">Contactos</a></li>
-              </ul>
-            </footer>
-          </div>
+  <!--Footers o Pie de pagina-->
+  <div class="container">
+    <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+      <p class="col-md-4 mb-0 text-muted">&copy; 2022 Alex Company, Inc</p>
+
+      <a href="/Inicio"
+        class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
+        <img src="{{url_for('static', filename='Img/Logo.png')}}" width="70px" alt="">
+        <svg class="bi me-2" width="40" height="32">
+          <use xlink:href="#bootstrap" />
+        </svg>
+      </a>
+
+      <ul class="nav col-md-4 justify-content-end">
+        <li class="nav-item"><a href="/Inicio" class="nav-link px-2 text-muted">Inicio</a></li>
+        <li class="nav-item"><a href="/Agendar_Cita" class="nav-link px-2 text-muted">Agendar Cita</a></li>
+        <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Servicios</a></li>
+        <li class="nav-item"><a href="/Sobre_Nosotros" class="nav-link px-2 text-muted">Sobre Nosotros</a></li>
+        <li class="nav-item"><a href="/Contacto" class="nav-link px-2 text-muted">Contactos</a></li>
+      </ul>
+    </footer>
+  </div>
 </body>
+
 </html>
+<!--Libreria de JavaScript -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
-    crossorigin="anonymous"></script>
+  integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>

@@ -6,13 +6,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inicio</title>
-
+    <!--Libreria de CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
 
 </head>
 
 <body>
+    <!--En esta seccion del codigo tendremos un container el cual va ser usado para nuestro header
+        donde tendremos una imagen de logo y nuestras opciones para poder navegar en 
+        nuestra pagina web.-->
     <header class="p-3 bg-dark text-white">
         <div class="container">
             <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
@@ -56,20 +59,23 @@
             </div>
         </div>
     </header>
+    <!--Con la ayuda de las plantillas de boostrap tendremos este carousel donde vamos a 
+        imagenes relacionada con la pagina en este caso de odontodologia las cuales 
+        le podran dar informacion o servir como galeria a una pagina. -->
     <div>
         <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active">
                     <img src="{{url_for('static', filename='Img/lugarT.jpg')}}" class="d-block w-100" alt="..."
-                        width="250px" height="510px">
+                        width="250px" height="550px">
                 </div>
                 <div class="carousel-item">
                     <img src="{{url_for('static', filename='Img/Atencion.jpg')}}" class="d-block w-100" alt="..."
-                        width="250px" height="510px">
+                        width="250px" height="550px">
                 </div>
                 <div class="carousel-item">
                     <img src="{{url_for('static', filename='Img/Tecg.jpeg')}}" class="d-block w-100" alt="..."
-                        width="250px" height="510px">
+                        width="250px" height="550px">
                 </div>
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade"
@@ -84,6 +90,9 @@
             </button>
         </div>
     </div>
+    <!--Aplicamos un estilo a una etiqueta p la cual no hara como una margen horizontal de color negro a nuestro
+        titulo de la imagen dando una mejor estetica a la pagina. De la misma forma un container para poder centrar nuestro
+        concepto -->
     <p
         style="background:black; color:white; font-weight:bold; padding:15px; border:3px solid white; margin-top:40px; margin-bottom:40px; text-align:center; font-size:22px; border-radius:10px;">
         Centro Odontologico Santo Domingo</p>
@@ -95,34 +104,35 @@
                 ti.
                 El Centro Odontologico Santo Domingo ofrece a todos los usuarios servicios como Ortodoncia,
                 Odontopediatria, Blanqueamiento dental, entre otros muchos servicios mas.
-                El consultorio odontológico esta ubicado en Av.Quito; abrió sus puertas en Diciembre de 2018, 
-                para ofrecer servicios odontológicos especializados en todas la áreas de Odontología, prestando 
-                atención de primera; con materiales, equipos y técnicas de vanguardia; brindada por profesionales 
-                certificados para cada necesidad y con amplia experiencia en su campo; ofreciendo precios competitivos 
+                El consultorio odontológico esta ubicado en Av.Quito; abrió sus puertas en Diciembre de 2018,
+                para ofrecer servicios odontológicos especializados en todas la áreas de Odontología, prestando
+                atención de primera; con materiales, equipos y técnicas de vanguardia; brindada por profesionales
+                certificados para cada necesidad y con amplia experiencia en su campo; ofreciendo precios competitivos
                 y resultados de calidad. Brindando al paciente un trato familiar y de respeto.
             </p>
         </div>
     </div>
-    <p
-        style="background:black; color:white; font-weight:bold; padding:15px; border:3px solid white; 
+    <p style="background:black; color:white; font-weight:bold; padding:15px; border:3px solid white; 
         margin-top:40px; margin-bottom:40px; text-align:center; font-size:22px; border-radius:10px;"></p>
     <!--Tarjetas-->
-    <!--Clase contener-->
+    <!--Clase container
+        tendremos las tarjetas las cuales estaran modificadas para que estas puedan centrar el contenido
+        y de la misma manera tener un background a cada tarjeta.-->
     <div class="container">
         <div class="row">
             <div class="col-md-4" style="padding: 20px">
-                <!--Clase de la tarjeta modificada en el centrado del texto y el background de la tarjeta-->
                 <div class="card text-center text-bg-dark mb-3" style="width: 18rem"> <img
                         src="https://www.odontocenter.ec/wp-content/uploads/2020/06/ORTODONCIA-e1591288807736.jpg"
                         class="card-img-top" alt="..." />
                     <div class="card-body">
                         <h5 class="card-title">Conoce mas sobre el servicio de Ortodoncia</h5>
-                        <p class="card-text"> Es una especialidad odontológica que nos permite el diagnóstico, prevención y 
-                            tratamiento correctivo de las piezas dentales que por distintos motivos no están en su posición 
+                        <p class="card-text"> Es una especialidad odontológica que nos permite el diagnóstico,
+                            prevención y
+                            tratamiento correctivo de las piezas dentales que por distintos motivos no están en su
+                            posición
                             normal. </p>
-                        <!--Etiqueta de enlace trabajando con un boton--> <a
-                            href="/Ortodoncia"
-                            class="btn btn-light">ORTODONCIA</a>
+                            <!--Hipervinculo el cual hara como funcion de boton-->
+                        <a href="/Ortodoncia" class="btn btn-light">ORTODONCIA</a>
                     </div>
                 </div>
             </div>
@@ -132,26 +142,26 @@
                         class="card-img-top" alt="..." />
                     <div class="card-body">
                         <h5 class="card-title">Conozca mas sobre la Odontopediatria</h5>
-                        <p class="card-text"> Ahora los más pequeños del hogar pueden disfrutar de una atención 
+                        <p class="card-text"> Ahora los más pequeños del hogar pueden disfrutar de una atención
                             personalizada con especialistas dedicados a su salud bucal; por eso hemos creado ODONTOKIDS.
 
-                            Ven y conoce las sorpresas que tenemos para tus hijos. </p> <a
-                            href="/Odontopediatria"
+                            Ven y conoce las sorpresas que tenemos para tus hijos. </p> <a href="/Odontopediatria"
                             class="btn btn-light">ODONTOPEDIATRÍA</a>
                     </div>
                 </div>
             </div>
+            <!--En esta seccion trabajamos con una imagen por medio de su direccion url-->
             <div class="col-md-4" style="padding: 20px">
                 <div class="card text-center text-bg-dark" style="width: 18rem"> <img
                         src="https://www.odontocenter.ec/wp-content/uploads/2020/06/BLANQUEAMIENTO-DENTAL-e1591288989712.png"
                         class="card-img-top" alt="..." />
                     <div class="card-body">
                         <h5 class="card-title">Conoce mas sobre nuestro servicio de Blanqueamiento dental </h5>
-                        <p class="card-text"> Todos nuestros procedimientos son de la técnica dental más avanzada disponible, 
-                            por lo que te recomendamos Blanqueamiento mediante Luz Fría, un método altamente efectivo y no 
-                            agresivo para tus dientes.</p> <a
-                            href="#"
-                            class="btn btn-light">BLANQUEAMIENTO DENTAL</a>
+                        <p class="card-text"> Todos nuestros procedimientos son de la técnica dental más avanzada
+                            disponible,
+                            por lo que te recomendamos Blanqueamiento mediante Luz Fría, un método altamente efectivo y
+                            no
+                            agresivo para tus dientes.</p> <a href="#" class="btn btn-light">BLANQUEAMIENTO DENTAL</a>
                     </div>
                 </div>
             </div>
@@ -160,25 +170,29 @@
     <!--Footers o Pie de pagina-->
     <div class="container">
         <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
-          <p class="col-md-4 mb-0 text-muted">&copy; 2022 Alex Company, Inc</p>
-      
-          <a href="/Inicio" class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
-            <img src="{{url_for('static', filename='Img/Logo.png')}}" width="70px" alt="">
-            <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"/></svg>
-          </a>
-      
-          <ul class="nav col-md-4 justify-content-end">
-            <li class="nav-item"><a href="/Inicio" class="nav-link px-2 text-muted">Inicio</a></li>
-            <li class="nav-item"><a href="/Agendar_Cita" class="nav-link px-2 text-muted">Agendar Cita</a></li>
-            <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Servicios</a></li>
-            <li class="nav-item"><a href="/Sobre_Nosotros" class="nav-link px-2 text-muted">Sobre Nosotros</a></li>
-            <li class="nav-item"><a href="/Contacto" class="nav-link px-2 text-muted">Contactos</a></li>
-          </ul>
+            <p class="col-md-4 mb-0 text-muted">&copy; 2022 Alex Company, Inc</p>
+
+            <a href="/Inicio"
+                class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
+                <img src="{{url_for('static', filename='Img/Logo.png')}}" width="70px" alt="">
+                <svg class="bi me-2" width="40" height="32">
+                    <use xlink:href="#bootstrap" />
+                </svg>
+            </a>
+
+            <ul class="nav col-md-4 justify-content-end">
+                <li class="nav-item"><a href="/Inicio" class="nav-link px-2 text-muted">Inicio</a></li>
+                <li class="nav-item"><a href="/Agendar_Cita" class="nav-link px-2 text-muted">Agendar Cita</a></li>
+                <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Servicios</a></li>
+                <li class="nav-item"><a href="/Sobre_Nosotros" class="nav-link px-2 text-muted">Sobre Nosotros</a></li>
+                <li class="nav-item"><a href="/Contacto" class="nav-link px-2 text-muted">Contactos</a></li>
+            </ul>
         </footer>
-      </div>
+    </div>
 </body>
 
 </html>
+<!--Libreria de JavaScript -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
     crossorigin="anonymous"></script>

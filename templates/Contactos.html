@@ -6,13 +6,16 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contactos</title>
-
+  <!--Libreria de CSS-->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
 
 </head>
 
 <body>
+  <!--En esta seccion del codigo tendremos un container el cual va ser usado para nuestro header
+        donde tendremos una imagen de logo y nuestras opciones para poder navegar en 
+        nuestra pagina web.-->
   <header class="p-3 bg-dark text-white">
     <div class="container">
       <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
@@ -57,7 +60,8 @@
     </div>
   </header>
 
-  <!--Formulario-->
+  <!--Formulario el cual estara dividido por el container la cual en una seccion tenemos
+    el formulario y por otra parte una imagen.-->
   <div class="site-section site-block-appointment">
     <div class="container">
       <div class="row">
@@ -74,6 +78,7 @@
               de los tratamientos
               realizados y satisfacción con los resultados logrados.
             </p>
+            <!--Imagen por medio de url-->
             <img
               src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8-KeCKhxbWFK6nPGakDQmbpPbkLUlcd388Q&usqp=CAU"
               class="d-block w-100" alt="..." width="250px" height="350px">
@@ -84,7 +89,7 @@
         <div class="col-lg-6 order-2 order-lg-1 p-5">
 
           <form action="#" method="POST" class="p-5 bg-white">
-
+            <!--Formulario-->
             <div class="row form-group">
               <div class="col-md-6 mb-3 mb-md-0">
                 <label class="font-weight-bold" for="fname">Nombre</label><br><br>
@@ -105,6 +110,8 @@
                 <input type="email" id="email" class="form-control" placeholder="Email"><br>
               </div>
             </div>
+            <!--En esta parte del formulario tendemos un drop o lista vertical
+                para que el usuario elija una opcion-->
             <div class="row form-group">
               <div class="col-md-12">
                 <label class="font-weight-bold" for="treatment">Tratamientos</label><br><br>
@@ -137,7 +144,8 @@
     </div>
   </div>
 
-  <!--Posible cambio mapa-->
+  <!--En esta seccion tendremos una API de la posible ubicacion de la empresa
+      con la ayuda de google maps podremos realizar esto.-->
   <div class="site-section site-block-3">
     <div class="container">
       <div class="row mb-5 justify-content-center">
@@ -191,5 +199,6 @@
 </body>
 
 </html>
+<!--Libreria de JavaScript-->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
   integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
